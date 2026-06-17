@@ -1,13 +1,1609 @@
 <!DOCTYPE html>
-<html>
+<html lang="gu">
 <head>
-	<title>Knowledge Test</title>
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="અમૃતમ વોટર સપ્લાયસ - મોરબી, ગુજરાતમાં 16+ વર્ષથી વિશ્વસનીય પ્રીમિયમ પાણી પુરવઠો. 20 લિટર બોટલ, કોલ્ડ જાર, RO શુદ્ધ પાણી, મફત ડિલિવરી.">
+  <meta name="keywords" content="Amrutam Water, Morbi water supply, 20 litre bottle, cold jar, RO water, Gujarat, Rajak Bhai, premium water">
+  <meta property="og:title" content="અમૃતમ વોટર સપ્લાયસ | Premium Water Supply Morbi">
+  <meta property="og:description" content="16+ વર્ષનો અતૂટ વિશ્વાસ | શુદ્ધ પાણી, મફત ડિલિવરી | અમૃતમ ના પાણી માં અમૃત નો એહસાસ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amrutamwater.com/">
+  <title>અમૃતમ વોટર સપ્લાયસ | Premium Water Supply Morbi</title>
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <link rel="shortcut icon" type="image/jpg" href="favicon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+:root {
+    --primary: #0a5eaa;
+    --primary-dark: #1e3a8a;
+    --accent: #3b82f6;
+    --gold: #f59e0b;
+    --whatsapp: #25D366;
+    --glass-bg: rgba(255,255,255,0.35);
+    --glass-border: rgba(255,255,255,0.55);
+    --text-dark: #1f2937;
+    --radius: 26px;
+    --shadow-card: 0 10px 35px rgba(0,0,0,0.08);
+    --transition: 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f9ff;
+      overflow-x: hidden;
+      color: var(--text-dark);
+      cursor: none;
+      transition: background 0.5s, color 0.5s;
+    }
+    /* Cursor Glow */
+    .cursor-glow {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(59,130,246,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: opacity 0.3s;
+    }
+    /* Particles */
+    #particlesCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    /* Dark Mode */
+    body.dark {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    body.dark .navbar {
+      background: rgba(15,23,42,0.9);
+    }
+    body.dark .glass-card {
+      background: rgba(30,41,59,0.6);
+      border-color: rgba(255,255,255,0.1);
+    }
+    body.dark .product-card, body.dark .feature-card, body.dark .calculator-card,
+    body.dark .info-card, body.dark .contact-form, body.dark .area-list,
+    body.dark .updates-card {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
+    body.dark .price-box {
+      background: #334155;
+    }
+    body.dark .price-value {
+      color: #93c5fd;
+    }
+    body.dark .section-title {
+      background: linear-gradient(135deg, #60a5fa, #93c5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    body.dark .footer {
+      background: linear-gradient(135deg, #020617, #0f172a);
+    }
+    body.dark .respect-banner {
+      background: linear-gradient(135deg, #450a0a, #7f1d1d);
+    }
+    body.dark .respect-banner h3 {
+      color: #fca5a5;
+    }
+    /* Skeleton Loader */
+    .skeleton {
+      background: linear-gradient(90deg, #e0e7ff 25%, #f0f4ff 50%, #e0e7ff 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 12px;
+    }
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
+    #skeletonLoader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f0f9ff;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes float {
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+    @keyframes pulse {
+      0%,100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 0 18px rgba(37,211,102,0);
+      }
+    }
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: all 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    /* Welcome Modal */
+    .welcome-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .modal-card {
+      background: white;
+      padding: 50px;
+      border-radius: 34px;
+      text-align: center;
+      max-width: 500px;
+      animation: zoomIn 0.6s ease;
+    }
+    .modal-card i {
+      font-size: 68px;
+      color: var(--accent);
+      animation: float 3s infinite;
+    }
+    .modal-card h2 {
+      font-size: 36px;
+      color: var(--primary-dark);
+      margin: 20px 0;
+    }
+    .modal-card .tagline {
+      font-size: 20px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .start-btn {
+      background: linear-gradient(135deg,var(--accent),var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 15px 48px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: transform 0.3s;
+    }
+    .start-btn:hover {
+      transform: scale(1.06);
+    }
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+      z-index: 1000;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo i {
+      font-size: 30px;
+      color: var(--accent);
+      filter: drop-shadow(0 0 8px #3b82f6);
+    }
+    .logo span {
+      font-size: 24px;
+      font-weight: 800;
+      background: linear-gradient(135deg,var(--primary-dark),var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #374151;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+    .dark-toggle {
+      background: rgba(0,0,0,0.05);
+      border: none;
+      font-size: 20px;
+      padding: 8px 14px;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+    .mobile-menu {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    @media(max-width:768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 24px;
+        text-align: center;
+        gap: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+    .slider {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .slide1 {
+      background-image: url('slider1.jpg');
+    }
+    .slide2 {
+      background-image: url('slider2.jpg');
+    }
+    .slide3 {
+      background-image: url('slider3.jpg');
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: white;
+      font-size: 22px;
+      z-index: 10;
+      transition: all 0.3s;
+    }
+    .slider-btn:hover {
+      background: var(--accent);
+    }
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      color: white;
+      z-index: 10;
+      width: 100%;
+      padding: 0 20px;
+      text-shadow: 2px 2px 14px rgba(0,0,0,0.6);
+    }
+    .hero-content h1 {
+      font-size: clamp(2.2rem,6vw,4rem);
+      font-weight: 800;
+    }
+    .hero-tagline {
+      font-size: clamp(1.3rem,3vw,1.8rem);
+      color: #fbbf24;
+      font-weight: 600;
+      margin: 12px 0;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg,var(--whatsapp),#128C7E);
+      padding: 14px 38px;
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      animation: pulse 2s infinite;
+      transition: transform 0.3s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-4px);
+    }
+    /* Glass Card */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+    }
+    /* Sections */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(2rem,4vw,2.8rem);
+      font-weight: 800;
+      background: linear-gradient(135deg,var(--primary-dark),var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: #6b7280;
+      font-size: 1.1rem;
+      margin-bottom: 48px;
+    }
+    /* Products */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+      gap: 40px;
+    }
+    .product-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      transform-style: preserve-3d;
+    }
+    .product-card:hover {
+      transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    .product-img {
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+    .product-card:hover .product-img img {
+      transform: scale(1.08);
+    }
+    .product-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: linear-gradient(135deg,var(--accent),var(--primary-dark));
+      color: white;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .product-info {
+      padding: 24px;
+    }
+    .product-info h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .product-desc {
+      color: #6b7280;
+      margin: 8px 0;
+    }
+    .price-row {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+    }
+    .price-box {
+      flex: 1;
+      background: #f3f4f6;
+      padding: 14px;
+      border-radius: 14px;
+      text-align: center;
+    }
+    .price-label {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    .price-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+    .free-delivery {
+      font-size: 0.7rem;
+      color: #10b981;
+    }
+    .order-wa-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg,var(--whatsapp),#128C7E);
+      color: white;
+      padding: 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .order-wa-btn:hover {
+      transform: scale(1.03);
+    }
+    /* Features */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 30px;
+    }
+    .feature-card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+    }
+    .feature-icon {
+      width: 75px;
+      height: 75px;
+      background: linear-gradient(135deg,#dbeafe,#eff6ff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 36px;
+      color: var(--accent);
+    }
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-content h2 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg,var(--primary-dark),var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .owner-name {
+      font-size: 1.8rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 16px 0;
+    }
+    .philosophy {
+      font-size: 1.2rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      font-style: italic;
+    }
+    .stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .stat-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    @media(max-width:768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Respect Banner */
+    .respect-banner {
+      background: linear-gradient(135deg,#fef2f2,#fee2e2);
+      padding: 50px;
+      border-radius: 22px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .respect-banner i {
+      font-size: 50px;
+      color: #dc2626;
+      margin-bottom: 20px;
+    }
+    .respect-banner h3 {
+      font-size: 28px;
+      color: #991b1b;
+      margin-bottom: 20px;
+    }
+    /* Service */
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .area-list {
+      background: #eff6ff;
+      padding: 30px;
+      border-radius: 22px;
+    }
+    .area-list h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .area-list ul {
+      list-style: none;
+    }
+    .area-list li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .area-list li i {
+      color: #10b981;
+    }
+    .service-map {
+      height: 400px;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+    .service-map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    @media(max-width:768px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Calculator */
+    .calculator-card {
+      background: white;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: var(--shadow-card);
+      text-align: center;
+    }
+    .calculator-card input, .calculator-card select {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0 18px;
+      border: 2px solid #e5e7eb;
+      border-radius: 14px;
+      font-size: 1rem;
+    }
+    .calc-btn {
+      background: linear-gradient(135deg,var(--accent),var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 14px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 16px;
+      background: #eff6ff;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    /* Updates */
+    .updates-card {
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      box-shadow: var(--shadow-card);
+      margin: 30px 0;
+    }
+    .updates-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .updates-card .update-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .update-date {
+      background: var(--accent);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+    }
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .info-card {
+      background: #f9fafb;
+      padding: 28px;
+      border-radius: 22px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .info-card i {
+      font-size: 40px;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    .contact-form {
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 22px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      border: 2px solid #e5e7eb;
+      border-radius: 14px;
+    }
+    .submit-btn {
+      background: linear-gradient(135deg,var(--whatsapp),#128C7E);
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      border-radius: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    @media(max-width:768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Report */
+    .report-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .report-frame {
+      width: 100%;
+      height: 600px;
+      border-radius: 20px;
+      border: none;
+    }
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg,#111827,#1f2937);
+      color: white;
+      padding: 60px 0 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-grid h3 {
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer-grid h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--accent);
+    }
+    .footer-grid a {
+      color: #9ca3af;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+      color: #6b7280;
+    }
+    /* Floating */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--whatsapp);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      z-index: 1000;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      animation: float 3s infinite;
+      text-decoration: none;
+    }
+    .ai-float {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: linear-gradient(135deg,var(--primary-dark),var(--accent));
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      z-index: 1000;
+      cursor: pointer;
+      animation: float 3s infinite;
+    }
+    .ai-chat-window {
+      position: fixed;
+      bottom: 110px;
+      left: 30px;
+      width: 360px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      z-index: 1001;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .chat-header {
+      background: linear-gradient(135deg,var(--primary-dark),var(--accent));
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chat-messages {
+      height: 300px;
+      overflow-y: auto;
+      padding: 15px;
+      background: #f9fafb;
+    }
+    .bot-msg {
+      background: #eff6ff;
+      padding: 10px 14px;
+      border-radius: 14px;
+      margin-bottom: 10px;
+    }
+    .user-msg {
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      text-align: right;
+      margin-left: auto;
+      max-width: 80%;
+    }
+    .quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 15px;
+    }
+    .quick-replies button {
+      background: #e0e7ff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .quick-replies button:hover {
+      background: var(--accent);
+      color: white;
+    }
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #e5e7eb;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+    }
+    .chat-input button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    @media(max-width:768px) {
+      .ai-chat-window {
+        width: 300px;
+        left: 15px;
+      }
+
+      .whatsapp-float,.ai-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-	
-  <canvas id="canvas"> </canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <canvas id="particlesCanvas"></canvas>
 
+  <!-- SKELETON LOADER -->
+  <div id="skeletonLoader">
+    <div class="skeleton" style="width:80px;height:80px;border-radius:50%;"></div>
+    <div class="skeleton" style="width:200px;height:24px;"></div>
+    <div class="skeleton" style="width:160px;height:18px;"></div>
+    <p style="color:#0a5eaa;font-weight:600;margin-top:20px;">
+      અમૃતમ વોટર લોડ થઈ રહ્યું છે...
+    </p>
+  </div>
+
+  <!-- WELCOME MODAL -->
+  <div id="welcomeModal" class="welcome-modal">
+    <div class="modal-card">
+      <i class="fas fa-tint"></i>
+      <h2>સ્વાગત છે!</h2>
+      <p>
+        અમૃતમ વોટર સપ્લાયસમાં તમારું હાર્દિક સ્વાગત છે.
+      </p>
+      <p class="tagline">
+        ✨ "અમૃતમ ના પાણી માં અમૃત નો એહસાસ" ✨
+      </p>
+      <button class="start-btn" id="startBtn">શરૂ કરો →</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="mainContent" style="display:none;">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="logo" href="#home"><i class="fas fa-tint"></i><span>અમૃતમ વોટર</span></a>
+        <div class="mobile-menu" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">હોમ</a>
+          <a href="#products">ઉત્પાદનો</a>
+          <a href="#about">અમારી વાર્તા</a>
+          <a href="#whyus">શા માટે અમે?</a>
+          <a href="#updates">અપડેટ્સ</a>
+          <a href="#service">સર્વિસ એરિયા</a>
+          <a href="#calculator">કેલ્ક્યુલેટર</a>
+          <a href="#report">રિપોર્ટ</a>
+          <a href="#contact">સંપર્ક</a>
+          <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section id="home" class="hero">
+      <div class="slider">
+        <div class="slide slide1 active"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <button class="slider-btn prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="hero-content">
+        <h1 class="animate-fadeUp">અમૃતમ વોટર સપ્લાયસ</h1>
+        <p class="hero-tagline">
+          ✨ "અમૃતમ ના પાણી માં અમૃત નો એહસાસ" ✨
+        </p>
+        <p class="animate-fadeUp">
+          16+ વર્ષનો અતૂટ વિશ્વાસ | મોરબી, ગુજરાત
+        </p>
+        <a href="https://wa.me/919537906611" class="cta-btn"><i class="fab fa-whatsapp"></i> ઓર્ડર કરો</a>
+      </div>
+    </section>
+    <div style="text-align:center; padding:30px;">
+      <div class="glass-card" style="display:inline-block; padding:18px 40px; font-weight:600;">
+        <i class="fas fa-certificate" style="color:gold;"></i> ISO Certified | 16+ Years | 1.5k+ Customers
+      </div>
+    </div>
+
+    <!-- Products -->
+    <section id="products">
+      <div class="container">
+        <h2 class="section-title reveal">💧 અમારા ઉત્પાદનો</h2>
+        <p class="section-subtitle reveal">
+          સ્વચ્છતા અને શુદ્ધતા — તમારી પસંદગી અમારી જવાબદારી
+        </p>
+        <div class="products-grid">
+          <div class="product-card reveal">
+            <div class="product-img">
+              <img src="bottle.jpg" alt="20 લિટર બોટલ" onerror="this.src='https://placehold.co/500x500/0a5eaa/ffffff?text=20L+Bottle'">
+              <div class="product-badge">
+                બેસ્ટ સેલર
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>20 લિટર બોટલ</h3>
+              <p class="product-desc">
+                શુદ્ધ RO પાણી, BPA-ફ્રી બોટલ, ઘરે ડિલિવરી
+              </p>
+              <div class="price-row">
+                <div class="price-box">
+                  <div class="price-label">
+                    નિયમિત ગ્રાહક
+                  </div>
+                  <div class="price-value">
+                    ₹20
+                  </div>
+                  <div class="free-delivery">
+                    <i class="fas fa-truck"></i> મફત ડિલિવરી
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="price-label">
+                    જથ્થાબંધ
+                  </div>
+                  <div class="price-value">
+                    ₹25
+                  </div>
+                </div>
+              </div>
+              <a href="https://wa.me/919537906611?text=20 લિટર બોટલ ઓર્ડર કરવી છે" class="order-wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp પર ઓર્ડર કરો</a>
+            </div>
+          </div>
+          <div class="product-card reveal">
+            <div class="product-img">
+              <img src="jar.jpg" alt="કોલ્ડ જાર" onerror="this.src='https://placehold.co/500x500/1e3a8a/ffffff?text=Cold+Jar'">
+              <div class="product-badge" style="background:linear-gradient(135deg,#f59e0b,#d97706);">
+                તાજગી ખાસ
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>કોલ્ડ જાર</h3>
+              <p class="product-desc">
+                ઠંડુ અને તાજું પાણી, ઉનાળા માટે શ્રેષ્ઠ
+              </p>
+              <div class="price-row">
+                <div class="price-box">
+                  <div class="price-label">
+                    નિયમિત ગ્રાહક
+                  </div>
+                  <div class="price-value">
+                    ₹35
+                  </div>
+                  <div class="free-delivery">
+                    <i class="fas fa-truck"></i> મફત ડિલિવરી
+                  </div>
+                </div>
+                <div class="price-box">
+                  <div class="price-label">
+                    જથ્થાબંધ
+                  </div>
+                  <div class="price-value">
+                    ₹40
+                  </div>
+                </div>
+              </div>
+              <a href="https://wa.me/919537906611?text=કોલ્ડ જાર ઓર્ડર કરવો છે" class="order-wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp પર ઓર્ડર કરો</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" style="background:#f8fafc;">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content reveal">
+            <h2>📖 અમારી વાર્તા</h2>
+            <div class="owner-name">
+              રજાક ભાઈ
+            </div>
+            <p>
+              મોરબીના પ્રતિષ્ઠિત ઉદ્યોગપતિ <strong>રજાક ભાઈ</strong> દ્વારા સ્થાપિત, અમૃતમ વોટર સપ્લાયસ છેલ્લા 16 વર્ષથી શુદ્ધ અને સ્વાસ્થ્યપ્રદ પીવાનું પાણી પૂરું પાડે છે.
+            </p>
+            <p class="philosophy">
+              અમારી ફિલોસોફી: <strong>"સેવા, શુદ્ધતા અને વિશ્વાસ"</strong>
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-num">
+                  16+
+                </div>
+                <div>
+                  વર્ષનો અનુભવ
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">
+                  1.5k+
+                </div>
+                <div>
+                  સંતુષ્ટ ગ્રાહકો
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">
+                  24/7
+                </div>
+                <div>
+                  સર્વિસ
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image reveal">
+            <img src="about.jpg" alt="અમૃતમ વોટર" onerror="this.src='https://placehold.co/600x400/0a5eaa/ffffff?text=Amrutam+Water'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="whyus">
+      <div class="container">
+        <h2 class="section-title reveal">🌟 શા માટે અમૃતમ વોટર?</h2>
+        <p class="section-subtitle reveal">
+          અમે શા માટે મોરબીનો સૌથી વિશ્વસનીય પાણી પુરવઠો છીએ
+        </p>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3>16 વર્ષનો વિશ્વાસ</h3><p>
+              મોરબીમાં સૌથી વધુ વિશ્વસનીય પાણી પુરવઠો
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>RO શુદ્ધિકરણ</h3><p>
+              અદ્યતન ટેકનોલોજીથી 100% શુદ્ધ પાણી
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <h3>મફત ડિલિવરી</h3><p>
+              નિયમિત ગ્રાહકો માટે સંપૂર્ણ મફત
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>સમયસર સેવા</h3><p>
+              સવારે 6:00 થી સાંજે 4:00
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>ગ્રાહક પ્રથમ</h3><p>
+              તમારો સંતોષ અમારી પ્રાથમિકતા
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3>સ્ટાફ પ્રત્યે આદર</h3><p>
+              અમારી ટીમ સાથે સન્માનથી વર્તો
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Respect Banner -->
+    <div class="container">
+      <div class="respect-banner reveal">
+        <i class="fas fa-handshake"></i>
+        <h3>અમારા સ્ટાફ પ્રત્યેનો આદર — અનિવાર્ય</h3>
+        <p>
+          🚫 અમારા સ્ટાફ સાથે અપમાનજનક ભાષા, મારામારી અથવા અભદ્ર વર્તન બિલકુલ સહન કરવામાં આવશે નહીં. કોઈપણ પ્રકારનો અનાદર કે ઝઘડો કરનાર ગ્રાહકની સેવા તાત્કાલિક બંધ કરવામાં આવશે. 🙏
+        </p>
+      </div>
+    </div>
+
+    <!-- Updates Section -->
+    <section id="updates">
+      <div class="container">
+        <h2 class="section-title reveal">📢 અપડેટ્સ અને નોટિસ</h2>
+        <div class="updates-card reveal">
+          <h3><i class="fas fa-bullhorn" style="color:var(--accent);"></i> તાજેતરની જાહેરાતો</h3>
+          <div class="update-item">
+            <span class="update-date">15 જૂન 2026</span> ઉનાળાની ખાસ ઓફર: 20L બોટલ પર 10% છૂટ!
+          </div>
+          <div class="update-item">
+            <span class="update-date">01 જૂન 2026</span> નવું ડિલિવરી ઝોન: લાતી પ્લોટ વિસ્તાર ઉમેરાયો.
+          </div>
+          <div class="update-item">
+            <span class="update-date">20 મે 2026</span> પાણીની ગુણવત્તા રિપોર્ટ અપડેટ થયો — હવે ડાઉનલોડ કરો.
+          </div>
+          <div class="update-item">
+            <span class="update-date">01 મે 2026</span> સ્ટાફ પ્રત્યે આદર નીતિ લાગુ — કૃપા કરીને નિયમો વાંચો.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section id="service">
+      <div class="container">
+        <h2 class="section-title reveal">📍 સર્વિસ એરિયા</h2>
+        <p class="section-subtitle reveal">
+          અમે સમગ્ર મોરબી શહેરમાં ડિલિવરી આપીએ છીએ
+        </p>
+        <div class="service-grid">
+          <div class="area-list reveal">
+            <h3><i class="fas fa-map-marker-alt"></i> ડિલિવરી ઝોન</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> મોરબી સિટી</li>
+              <li><i class="fas fa-check-circle"></i> રવાપર રોડ</li>
+              <li><i class="fas fa-check-circle"></i> નવું બસ સ્ટેન્ડ</li>
+              <li><i class="fas fa-check-circle"></i> લાતી પ્લોટ</li>
+            </ul>
+            <p style="margin-top:20px; font-weight:600; color:var(--primary-dark);">
+              <i class="fas fa-truck"></i> "Delivery all over Morbi"
+            </p>
+          </div>
+          <div class="service-map reveal">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117905.89695548132!2d70.77418772285118!3d22.817384640258147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958697d0b1d2e2b%3A0x8b6c7e0f6d0b1f2a!2sMorbi%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1711711711711" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" style="background:#f8fafc;">
+      <div class="container">
+        <div class="calculator-card reveal">
+          <i class="fas fa-calculator" style="font-size:50px;color:var(--accent);margin-bottom:20px;"></i>
+          <h2>💧 પાણીના સેવનનું કેલ્ક્યુલેટર</h2>
+          <p>
+            તમારા વજન અને પ્રવૃત્તિ પ્રમાણે દૈનિક પાણીની જરૂરિયાત જાણો
+          </p>
+          <input type="number" id="weight" placeholder="વજન (કિલોગ્રામ)">
+          <select id="activity">
+            <option value="35">ઓછી પ્રવૃત્તિ (બેઠાડુ કામ)</option>
+            <option value="45" selected>મધ્યમ પ્રવૃત્તિ (થોડો વ્યાયામ)</option>
+            <option value="55">ઉચ્ચ પ્રવૃત્તિ (સખત કસરત/મજૂરી)</option>
+          </select>
+          <button class="calc-btn" id="calcBtn">ગણતરી કરો</button>
+          <div class="result" id="result"></div>
+          <p style="margin-top:12px; font-size:0.85rem; color:#6b7280;">
+            * સ્વાસ્થ્ય નિષ્ણાતોની ભલામણ પ્રમાણે દૈનિક 3-5 લિટર પાણી જરૂરી છે.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Report -->
+    <section id="report">
+      <div class="container">
+        <h2 class="section-title reveal">📄 ગુણવત્તા રિપોર્ટ અને પ્રમાણપત્ર</h2>
+        <div class="report-container reveal">
+          <iframe class="report-frame" src="https://docs.google.com/viewer?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"></iframe>
+          <div style="text-align:center; margin-top:20px;">
+            <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download class="cta-btn" style="animation:none;"><i class="fas fa-download"></i> PDF ડાઉનલોડ કરો</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">📞 સંપર્ક કરો</h2>
+        <p class="section-subtitle reveal">
+          કોઈપણ પ્રશ્નો માટે અમારો સંપર્ક કરો
+        </p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-card reveal">
+              <i class="fas fa-phone-alt"></i><h3>કૉલ કરો</h3><p>
+                +91 95379 06611
+              </p>
+              <small>સવારે 6:00 - સાંજે 4:00</small>
+            </div>
+            <div class="info-card reveal">
+              <i class="fab fa-whatsapp"></i><h3>WhatsApp</h3><p>
+                +91 95379 06611
+              </p>
+              <a href="https://wa.me/919537906611" style="color:var(--whatsapp);">અહીં ક્લિક કરો</a>
+            </div>
+            <div class="info-card reveal">
+              <i class="fas fa-map-marker-alt"></i><h3>સરનામું</h3><p>
+                મોરબી, ગુજરાત
+              </p>
+            </div>
+          </div>
+          <div class="contact-form reveal">
+            <form id="feedbackForm">
+              <input type="text" id="name" placeholder="તમારું નામ" required>
+              <input type="tel" id="mobile" placeholder="મોબાઇલ નંબર">
+              <textarea id="message" rows="5" placeholder="તમારો સંદેશ..." required></textarea>
+              <button type="submit" class="submit-btn"><i class="fab fa-whatsapp"></i> WhatsApp પર મોકલો</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>અમૃતમ વોટર</h3>
+            <p style="color:#9ca3af;">
+              16 વર્ષનો અતૂટ વિશ્વાસ | મોરબી
+            </p>
+            <p style="color:#fbbf24; margin-top:10px;">
+              "અમૃતમ ના પાણી માં અમૃત નો એહસાસ"
+            </p>
+          </div>
+          <div>
+            <h3>ઝડપી લિંક્સ</h3>
+            <a href="#home">હોમ</a>
+            <a href="#products">ઉત્પાદનો</a>
+            <a href="#about">અમારી વાર્તા</a>
+            <a href="#whyus">શા માટે અમે?</a>
+            <a href="#updates">અપડેટ્સ</a>
+            <a href="#contact">સંપર્ક</a>
+          </div>
+          <div>
+            <h3>કાનૂની</h3>
+            <a href="https://rehan-sandhi.blogspot.com/2026/02/my-license.html" target="_blank"><i class="fas fa-certificate"></i> વેબસાઇટ લાઇસન્સ</a>
+            <p style="margin-top:20px; color:#6b7280;">
+              <i class="fas fa-copyright"></i> 2026 અમૃતમ વોટર સપ્લાયસ
+            </p>
+            <p style="color:#6b7280;">
+              All Rights Reserved
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            અમૃતમ વોટર સપ્લાયસ - મોરબીનો વિશ્વાસ | સ્વચ્છ પાણી, સ્વસ્થ જીવન
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/919537906611" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <div class="ai-float" id="aiFloat">
+      <i class="fas fa-robot"></i>
+    </div>
+
+    <!-- AI Chat -->
+    <div class="ai-chat-window" id="aiChatWindow">
+      <div class="chat-header">
+        <span><i class="fas fa-brain"></i> અમૃતમ AI સહાયક</span>
+        <button id="closeChat" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">✕</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="bot-msg">
+          <i class="fas fa-robot"></i> નમસ્તે! હું અમૃતમ AI સહાયક છું. ભાવ, ઓર્ડર, ડિલિવરી, સમય, આદર નીતિ વિશે પૂછો.
+        </div>
+      </div>
+      <div class="quick-replies" id="quickReplies">
+        <button data-q="ભાવ શું છે?">💰 ભાવ</button>
+        <button data-q="ઓર્ડર કેવી રીતે કરવો?">🛒 ઓર્ડર</button>
+        <button data-q="ડિલિવરી સમય શું છે?">🚚 ડિલિવરી</button>
+        <button data-q="સેવાનો સમય શું છે?">⏰ સમય</button>
+        <button data-q="આદર નીતિ વિશે જણાવો">🙏 આદર નીતિ</button>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="તમારો પ્રશ્ન લખો...">
+        <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Skeleton Loader
+      window.addEventListener('load', ()=> {
+        setTimeout(()=> {
+          document.getElementById('skeletonLoader').style.opacity = '0';
+          setTimeout(()=>document.getElementById('skeletonLoader').style.display = 'none', 500);
+        }, 1500);
+      });
+      // Welcome Modal
+      document.getElementById('startBtn').addEventListener('click', ()=> {
+        document.getElementById('welcomeModal').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+        document.body.style.overflow = 'auto';
+      });
+      document.body.style.overflow = 'hidden';
+      // Cursor glow
+      const glow = document.getElementById('cursorGlow');
+      document.addEventListener('mousemove', e=> {
+        glow.style.left = e.clientX+'px'; glow.style.top = e.clientY+'px';
+      });
+      // Particles
+      const canvas = document.getElementById('particlesCanvas'), ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+      let particles = Array.from({
+        length: 65
+      }, ()=>({
+          x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2.2+0.6, vx: Math.random()*0.35-0.175, vy: Math.random()*0.35-0.175
+        }));
+      function animP() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy; if (p.x < 0)p.x = canvas.width; if (p.x > canvas.width)p.x = 0; if (p.y < 0)p.y = canvas.height; if (p.y > canvas.height)p.y = 0; ctx.fillStyle = 'rgba(59,130,246,0.45)'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill();
+        }); requestAnimationFrame(animP);
+      }animP();
+      window.addEventListener('resize',
+        ()=> {
+          canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        });
+      // Slider
+      let cur = 0; const slides = document.querySelectorAll('.slide');
+      function showSlide(i) {
+        slides.forEach((s, idx)=>s.classList.toggle('active', idx === i));
+      }
+      document.getElementById('nextSlide').addEventListener('click',
+        ()=> {
+          cur = (cur+1)%slides.length; showSlide(cur);
+        });
+      document.getElementById('prevSlide').addEventListener('click',
+        ()=> {
+          cur = (cur-1+slides.length)%slides.length; showSlide(cur);
+        });
+      setInterval(()=> {
+        cur = (cur+1)%slides.length; showSlide(cur);
+      },
+        5000);
+      // Scroll Reveal
+      const observer = new IntersectionObserver(entries=> {
+        entries.forEach(e => {
+          if (e.isIntersecting)e.target.classList.add('active');
+        });
+      }, {
+        threshold: 0.12
+      });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      // Calculator (higher water recommendation for health & sales)
+      document.getElementById('calcBtn').addEventListener('click', ()=> {
+        let w = parseFloat(document.getElementById('weight').value);
+        let act = parseFloat(document.getElementById('activity').value);
+        if (!w || w <= 0) {
+          document.getElementById('result').innerHTML = '❌ માન્ય વજન દાખલ કરો'; return;
+        }
+        let water = (w*act/10).toFixed(1);
+        if (water < 3) water = 3.0;
+        document.getElementById('result').innerHTML = `💧 તમારા માટે દૈનિક <strong>${water} લિટર</strong> પાણી જરૂરી છે.<br><small>સ્વસ્થ રહેવા માટે અમૃતમનું શુદ્ધ પાણી પીઓ!</small>`;
+      });
+      // Feedback
+      document.getElementById('feedbackForm').addEventListener('submit',
+        e=> {
+          e.preventDefault();
+          let n = document.getElementById('name').value,
+          m = document.getElementById('message').value,
+          mb = document.getElementById('mobile').value;
+          if (!n||!m) {
+            alert('નામ અને સંદેશ ભરો'); return;
+          }
+          window.open(`https://wa.me/919537906611?text=નામ:%20${n}%0Aમોબાઇલ:%20${mb || 'N/A'}%0Aસંદેશ:%20${m}`);
+          e.target.reset();
+        });
+      // Dark mode
+      document.getElementById('darkToggle').addEventListener('click',
+        ()=>document.body.classList.toggle('dark'));
+      // Mobile menu
+      document.getElementById('mobileMenuBtn').addEventListener('click',
+        ()=>document.getElementById('navLinks').classList.toggle('active'));
+      // AI Chat with smart keyword matching
+      const chatWin = document.getElementById('aiChatWindow'), chatMsgs = document.getElementById('chatMessages');
+      function addBot(text) {
+        chatMsgs.innerHTML += `<div class="bot-msg"><i class="fas fa-robot"></i> ${text}</div>`; chatMsgs.scrollTop = chatMsgs.scrollHeight;
+      }
+      function addUser(text) {
+        chatMsgs.innerHTML += `<div class="user-msg">${text}</div>`; chatMsgs.scrollTop = chatMsgs.scrollHeight;
+      }
+      function getAI(q) {
+        let l = q.toLowerCase();
+        if (l.includes('ભાવ') || l.includes('કિંમત') || l.includes('price') || l.includes('rate')) return "📊 <b>20L બોટલ:</b> નિયમિત ₹20 (મફત ડિલિવરી), જથ્થાબંધ ₹25.<br>🧊 <b>કોલ્ડ જાર:</b> નિયમિત ₹35 (મફત ડિલિવરી), જથ્થાબંધ ₹40.";
+        if (l.includes('ઓર્ડર') || l.includes('order') || l.includes('ખરીદ') || l.includes('buy')) return "🛒 ઓર્ડર કરવા માટે WhatsApp બટન દબાવો અથવા +91 95379 06611 પર કૉલ/મેસેજ કરો. અમે તરત જ ડિલિવરી કરીશું!";
+        if (l.includes('ડિલિવરી') || l.includes('delivery') || l.includes('પહોંચ')) return "🚚 અમે સમગ્ર મોરબી શહેરમાં મફત ડિલિવરી આપીએ છીએ. નિયમિત ગ્રાહકો માટે ડિલિવરી સંપૂર્ણ મફત!";
+        if (l.includes('સમય') || l.includes('time') || l.includes('timing')) return "⏰ અમારી સેવા સવારે 6:00 થી સાંજે 4:00 સુધી ઉપલબ્ધ છે. રવિવારે પણ સેવા ચાલુ રહે છે.";
+        if (l.includes('આદર') || l.includes('respect') || l.includes('staff') || l.includes('સ્ટાફ')) return "🙏 અમારા સ્ટાફ પ્રત્યે આદર અનિવાર્ય છે. અપમાનજનક વર્તન કરનાર ગ્રાહકની સેવા તાત્કાલિક બંધ કરવામાં આવશે.";
+        if (l.includes('મોરબી') || l.includes('morbi') || l.includes('એરિયા')) return "📍 અમે સંપૂર્ણ મોરબી શહેર, રવાપર રોડ, નવું બસ સ્ટેન્ડ, લાતી પ્લોટમાં ડિલિવરી આપીએ છીએ.";
+        if (l.includes('રિપોર્ટ') || l.includes('report') || l.includes('certificate')) return "📄 ગુણવત્તા રિપોર્ટ અમારી વેબસાઇટના 'રિપોર્ટ' સેક્શનમાં જુઓ અથવા PDF ડાઉનલોડ કરો.";
+        if (l.includes('contact') || l.includes('phone') || l.includes('નંબર')) return "📞 અમારો સંપર્ક નંબર: +91 95379 06611. WhatsApp પર પણ મેસેજ કરી શકો છો.";
+        return "આપના પ્રશ્ન માટે આભાર! 🙏 વધુ માહિતી માટે +91 95379 06611 પર સંપર્ક કરો. અમૃતમ વોટર — શુદ્ધતા અને વિશ્વાસ!";
+      }
+      document.getElementById('aiFloat').addEventListener('click', ()=>chatWin.style.display = chatWin.style.display === 'flex'?'none': 'flex');
+      document.getElementById('closeChat').addEventListener('click', ()=>chatWin.style.display = 'none');
+      function sendMsg(msg) {
+        addUser(msg); setTimeout(()=>addBot(getAI(msg)), 350);
+      }
+      document.getElementById('sendChat').addEventListener('click', ()=> {
+        let m = document.getElementById('chatInput').value.trim(); if (m) {
+          sendMsg(m); document.getElementById('chatInput').value = '';
+        }});
+      document.getElementById('chatInput').addEventListener('keypress',
+        e=> {
+          if (e.key === 'Enter') {
+            let m = e.target.value.trim(); if (m) {
+              sendMsg(m); e.target.value = '';
+            }}});
+      document.querySelectorAll('#quickReplies button').forEach(btn => {
+        btn.addEventListener('click', ()=>sendMsg(btn.dataset.q));
+      });
+    })();
+  </script>
 </body>
-<script src="./index.js"></script>
-</html>
+			</html>
