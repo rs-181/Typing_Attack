@@ -3,6 +3,106 @@
    FULLY RESPONSIVE STYLESHEET
    ============================================ */
 
+/* ============================================
+   CRITICAL FIX - Content Overflow & Extra Space
+   ============================================ */
+
+/* Root fix - kuchh bhi bahar nahi jayega */
+html {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all sections stay within viewport */
+section, 
+header, 
+footer, 
+nav,
+div {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Container safety */
+.section-container {
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: hidden;
+}
+
+/* Image safety - kabhi bahar na jaye */
+img, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Grid safety */
+.collection-grid,
+.footer-grid,
+.about-grid,
+.contact-grid {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Swiper slider safety */
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+    max-width: 100vw;
+}
+
+/* Ensure 3D cards don't overflow */
+.watch-card {
+    overflow: hidden;
+}
+
+.card-3d {
+    max-width: 100%;
+}
+
+/* Hero canvas fix */
+#hero-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    .section-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 /* === CSS Variables === */
 :root {
     --gold: #D4AF37;
