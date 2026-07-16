@@ -1,29 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ============================================ -->
+    <!-- BASIC META TAGS -->
+    <!-- ============================================ -->
     <meta charset="UTF-8">
-    <!-- UPDATE this line: -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-
-    <title>Patel Watch | Morbi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- Google Fonts -->
+    <!-- ============================================ -->
+    <!-- PRIMARY SEO TAGS -->
+    <!-- ============================================ -->
+    <title>Patel Watch - Morbi | Luxury Timepieces</title>
+    <meta name="description" content="Patel Watch - Morbi's trusted premium watch shop since 2010. Buy luxury, classic, sports & smart watches. Best prices, genuine products, 15+ years experience. Shop No. 19 & 20, Patel Shopping, Near Super Market, Morbi - 363641. Call +91 90164 44677.">
+    <meta name="keywords" content="watch shop Morbi, premium watches Morbi, luxury watches Gujarat, Patel Watch, watch store near super market Morbi, best watch shop Morbi, branded watches Morbi, affordable watches Morbi, watch repair Morbi, digital watches, analog watches, smart watches Morbi">
+    <meta name="author" content="Patel Watch - Jaydeep Detroja">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- ============================================ -->
+    <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <!-- ============================================ -->
+    <meta property="og:title" content="Patel Watch - Premium Watch Shop in Morbi | Since 2010">
+    <meta property="og:description" content="Discover exquisite collection of premium watches at Patel Watch, Morbi. Luxury, classic, sports & smart watches. 15+ years of trusted service. Visit us today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://patel-watch.netlify.app">
+    <meta property="og:image" content="https://patel-watch.netlify.app/watch1.jpg">
+    <meta property="og:image:alt" content="Patel Watch Premium Collection">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Patel Watch Morbi">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- ============================================ -->
+    <!-- TWITTER CARDS -->
+    <!-- ============================================ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patel Watch - Premium Watches in Morbi">
+    <meta name="twitter:description" content="Premium watch shop in Morbi since 2010. Luxury, classic & smart watches at best prices. Visit Patel Shopping, Near Super Market.">
+    <meta name="twitter:image" content="https://patel-watch.netlify.app/watch1.jpg">
+    
+    <!-- ============================================ -->
+    <!-- SCHEMA.ORG STRUCTURED DATA (JSON-LD) -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Patel Watch",
+        "alternateName": "Patel Watch Shop Morbi",
+        "description": "Premium watch shop in Morbi offering luxury, classic, sports and smart watches since 2010.",
+        "image": "https://patel-watch.netlify.app/watch1.jpg",
+        "url": "https://patel-watch.netlify.app",
+        "telephone": "+919016444677",
+        "priceRange": "₹999 - ₹50,000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shop No. 19 & 20, Patel Shopping, Near Super Market",
+            "addressLocality": "Morbi",
+            "addressRegion": "Gujarat",
+            "postalCode": "363641",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "22.8200",
+            "longitude": "70.8300"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "10:00",
+                "closes": "21:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "11:00",
+                "closes": "18:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/_.patel_.watch_/",
+            "https://wa.me/919016444677"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Watch Collection",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Luxury Watches",
+                        "category": "Luxury"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Classic Watches",
+                        "category": "Classic"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Sports Watches",
+                        "category": "Sports"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Smart Watches",
+                        "category": "Smart"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "ratingCount": "250"
+        },
+        "foundingDate": "2010",
+        "founder": {
+            "@type": "Person",
+            "name": "Jaydeep Detroja"
+        }
+    }
+    </script>
+    
+    <!-- ============================================ -->
+    <!-- FAQ SCHEMA -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Which is the best watch shop in Morbi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Patel Watch is one of the most trusted watch shops in Morbi since 2010. Located at Shop No. 19 & 20, Patel Shopping near Super Market, we offer premium luxury, classic, sports and smart watches with 15+ years of experience."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What brands of watches are available at Patel Watch Morbi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Patel Watch offers a wide range of premium watch brands including luxury, classic analog, sports chronographs, and latest smart watches. All watches are genuine with warranty."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the store timings of Patel Watch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Patel Watch is open Monday to Saturday from 10:00 AM to 9:00 PM, and Sunday from 11:00 AM to 6:00 PM. You can also contact us at +91 90164 44677."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Patel Watch offer warranty on watches?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all watches at Patel Watch come with manufacturer warranty ranging from 1 year to lifetime warranty depending on the model. We only sell genuine products."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- ============================================ -->
+    <!-- BREADCRUMB SCHEMA -->
+    <!-- ============================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://patel-watch.netlify.app"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Watch Collection",
+                "item": "https://patel-watch.netlify.app/#collection"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Contact",
+                "item": "https://patel-watch.netlify.app/#contact"
+            }
+        ]
+    }
+    </script>
+
+    <!-- ============================================ -->
+    <!-- CANONICAL URL -->
+    <!-- ============================================ -->
+    <link rel="canonical" href="https://patel-watch.netlify.app">
+    
+    <!-- ============================================ -->
+    <!-- FAVICON -->
+    <!-- ============================================ -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>">
+    
+    <!-- ============================================ -->
+    <!-- ALTERNATE LANGUAGES -->
+    <!-- ============================================ -->
+    <link rel="alternate" hreflang="en-IN" href="https://patel-watch.netlify.app">
+    <link rel="alternate" hreflang="gu-IN" href="https://patel-watch.netlify.app/gu">
+    <link rel="alternate" hreflang="hi-IN" href="https://patel-watch.netlify.app/hi">
+    <link rel="alternate" hreflang="x-default" href="https://patel-watch.netlify.app">
+    
+    <!-- ============================================ -->
+    <!-- GOOGLE FONTS -->
+    <!-- ============================================ -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- ============================================ -->
+    <!-- FONT AWESOME -->
+    <!-- ============================================ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Swiper CSS -->
+    <!-- ============================================ -->
+    <!-- SWIPER CSS -->
+    <!-- ============================================ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
-    <!-- AOS Animation -->
+    <!-- ============================================ -->
+    <!-- AOS ANIMATION -->
+    <!-- ============================================ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Tumhari CSS file (same folder) -->
+    <!-- ============================================ -->
+    <!-- CUSTOM CSS -->
+    <!-- ============================================ -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -506,5 +740,6 @@
     
     <!-- Tumhari JS file (same folder) -->
     <script src="script.js"></script>
+
 </body>
 </html>
